@@ -1,0 +1,80 @@
+/* === Main CSS Entry Point === */
+
+/* Base */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+/* Layout */
+@import 'layout/grid.css';
+@import 'layout/sections.css';
+
+/* Components */
+@import 'components/navbar.css';
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/footer.css';
+
+/* === Global Utilities === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* === Fade-in Animation === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-slower), transform var(--transition-slower);
+}
+
+.fade-in--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in--delay-1 { transition-delay: 100ms; }
+.fade-in--delay-2 { transition-delay: 200ms; }
+.fade-in--delay-3 { transition-delay: 300ms; }
+.fade-in--delay-4 { transition-delay: 400ms; }
+
+/* === Loading Skeleton === */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-neutral-dark) 25%,
+    var(--color-neutral) 50%,
+    var(--color-neutral-dark) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton--image {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+}
+
+.skeleton--text {
+  height: 16px;
+  width: 80%;
+}
+
+.skeleton--text-sm {
+  height: 12px;
+  width: 60%;
+}

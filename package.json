@@ -1,0 +1,17 @@
+{
+  "name": "legide-stitches",
+  "version": "1.0.0",
+  "description": "Handcrafted crochet fashion brand — frontend website",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "echo 'No build step — static site ready for deployment'",
+    "preview": "node server.js"
+  },
+  "keywords": ["crochet", "fashion", "handmade", "ecommerce"],
+  "author": "Legide Stitches",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

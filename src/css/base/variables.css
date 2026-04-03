@@ -1,0 +1,122 @@
+:root {
+  /* === Color Palette === */
+  --color-primary: #c16efa;
+  --color-primary-light: #d49afc;
+  --color-primary-dark: #a84ef5;
+  --color-primary-rgb: 193, 110, 250;
+
+  --color-secondary: #848e78;
+  --color-secondary-light: #a3ab9a;
+  --color-secondary-dark: #6b7360;
+  --color-secondary-rgb: 132, 142, 120;
+
+  --color-tertiary: #d99c74;
+  --color-tertiary-light: #e4b89a;
+  --color-tertiary-dark: #c4825a;
+  --color-tertiary-rgb: 217, 156, 116;
+
+  --color-neutral: #f5f2ed;
+  --color-neutral-light: #faf8f5;
+  --color-neutral-dark: #e8e3db;
+  --color-neutral-darker: #d4cec4;
+
+  /* === Text Colors === */
+  --color-text-primary: #2c2c2c;
+  --color-text-secondary: #5a5a5a;
+  --color-text-muted: #8a8a8a;
+  --color-text-inverse: #ffffff;
+
+  /* === Semantic Colors === */
+  --color-success: #6fbf73;
+  --color-error: #e85d5d;
+  --color-warning: #f0b95b;
+  --color-info: #6bb5e0;
+
+  /* === Typography === */
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-accent: 'Cormorant Garamond', 'Georgia', serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* === Spacing (8pt grid) === */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* === Border Radius === */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* === Shadows === */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.06);
+  --shadow-glow: 0 0 20px rgba(var(--color-primary-rgb), 0.3);
+
+  /* === Transitions === */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+  --transition-slower: 700ms ease;
+
+  /* === Z-Index Scale === */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  /* === Container === */
+  --container-max: 1280px;
+  --container-narrow: 960px;
+  --container-padding: var(--space-6);
+
+  /* === Navbar === */
+  --navbar-height: 80px;
+}
+
+/* === Dark Mode Variables === */
+[data-theme="dark"] {
+  --color-neutral: #1a1a1a;
+  --color-neutral-light: #242424;
+  --color-neutral-dark: #2a2a2a;
+  --color-neutral-darker: #333333;
+
+  --color-text-primary: #f0f0f0;
+  --color-text-secondary: #b0b0b0;
+  --color-text-muted: #707070;
+  --color-text-inverse: #1a1a1a;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.4);
+}

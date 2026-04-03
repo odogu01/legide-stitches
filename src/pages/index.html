@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Legide Stitches - Handcrafted crochet fashion. Discover unique, handmade crochet wears crafted with love and elegance.">
+  <meta name="keywords" content="crochet, handmade, fashion, crochet wears, handcrafted, Legide Stitches">
+  <meta property="og:title" content="Legide Stitches | Handcrafted Elegance in Every Stitch">
+  <meta property="og:description" content="Discover unique, handmade crochet fashion pieces crafted with love and artistry.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://legidestitches.com">
+  <title>Legide Stitches | Handcrafted Elegance in Every Stitch</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/svg+xml" href="../../public/icons/favicon.svg">
+</head>
+<body>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__brand">
+        <svg class="navbar__logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 16C10 12.686 12.686 10 16 10C19.314 10 22 12.686 22 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 18C12 15.791 13.791 14 16 14C18.209 14 20 15.791 20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="20" r="1.5" fill="currentColor"/>
+        </svg>
+        <span class="navbar__logo">Legide Stitches</span>
+      </a>
+
+      <div class="navbar__menu" id="navbarMenu">
+        <a href="index.html" class="navbar__link navbar__link--active" data-nav>Home</a>
+        <a href="shop.html" class="navbar__link" data-nav>Shop</a>
+        <a href="about.html" class="navbar__link" data-nav>About</a>
+        <a href="contact.html" class="navbar__link" data-nav>Contact</a>
+      </div>
+
+      <div class="navbar__actions">
+        <button class="navbar__action-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="theme-icon--light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="theme-icon--dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="navbar__action-btn" aria-label="Shopping cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+        </button>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+        </button>
+      </div>
+    </div>
+    <div class="navbar__overlay" id="navbarOverlay"></div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <span class="hero__badge fade-in">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          Handcrafted with Love
+        </span>
+        <h1 class="hero__title fade-in fade-in--delay-1">
+          Handcrafted <span class="hero__title-accent">Elegance</span> in Every Stitch
+        </h1>
+        <p class="hero__description fade-in fade-in--delay-2">
+          Discover unique crochet pieces that blend timeless artistry with modern style. Each creation is a masterpiece, made just for you.
+        </p>
+        <div class="hero__actions fade-in fade-in--delay-3">
+          <a href="shop.html" class="btn btn--primary btn--lg">Shop Collection</a>
+          <a href="about.html" class="btn btn--secondary btn--lg">Our Story</a>
+        </div>
+      </div>
+      <div class="hero__image-wrapper fade-in fade-in--delay-2">
+        <div class="hero__image-decoration" aria-hidden="true"></div>
+        <img
+          src="../../public/images/hero-model.jpg"
+          alt="Model wearing handcrafted crochet top by Legide Stitches"
+          class="hero__image"
+          loading="eager"
+        >
+      </div>
+    </div>
+    <a href="#featured" class="hero__scroll-indicator" aria-label="Scroll to featured products">
+      <span>Scroll</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+      </svg>
+    </a>
+  </header>
+
+  <!-- Featured Products -->
+  <section class="section" id="featured">
+    <div class="container">
+      <h2 class="section-title fade-in">Featured Pieces</h2>
+      <p class="section-subtitle fade-in">Curated selections from our latest collection</p>
+      <div class="featured__grid">
+        <!-- Product 1 -->
+        <article class="product-card fade-in fade-in--delay-1" data-product-id="1">
+          <div class="product-card__image-wrapper">
+            <img
+              src="../../public/images/product-summer-bloom-top.jpg"
+              alt="Crochet Summer Top - Handmade"
+              class="product-card__image"
+              loading="lazy"
+            >
+            <div class="product-card__overlay">
+              <a href="shop.html" class="btn btn--primary btn--sm">View Details</a>
+            </div>
+            <span class="product-card__badge">New</span>
+            <button class="product-card__wishlist" aria-label="Add to wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card__content">
+            <span class="product-card__category">Tops</span>
+            <h3 class="product-card__title">Summer Bloom Top</h3>
+            <p class="product-card__price">₦25,000</p>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card fade-in fade-in--delay-2" data-product-id="2">
+          <div class="product-card__image-wrapper">
+            <img
+              src="../../public/images/product-woven-market-bag.jpg"
+              alt="Crochet Handbag - Artisan Made"
+              class="product-card__image"
+              loading="lazy"
+            >
+            <div class="product-card__overlay">
+              <a href="shop.html" class="btn btn--primary btn--sm">View Details</a>
+            </div>
+            <button class="product-card__wishlist" aria-label="Add to wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card__content">
+            <span class="product-card__category">Bags</span>
+            <h3 class="product-card__title">Artisan Tote Bag</h3>
+            <p class="product-card__price">₦18,000</p>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card fade-in fade-in--delay-3" data-product-id="3">
+          <div class="product-card__image-wrapper">
+            <img
+              src="../../public/images/product-garden-party-dress.jpg"
+              alt="Crochet Maxi Dress - Elegant"
+              class="product-card__image"
+              loading="lazy"
+            >
+            <div class="product-card__overlay">
+              <a href="shop.html" class="btn btn--primary btn--sm">View Details</a>
+            </div>
+            <span class="product-card__badge">Popular</span>
+            <button class="product-card__wishlist" aria-label="Add to wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card__content">
+            <span class="product-card__category">Dresses</span>
+            <h3 class="product-card__title">Bohemian Maxi Dress</h3>
+            <p class="product-card__price">₦45,000</p>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card fade-in fade-in--delay-4" data-product-id="4">
+          <div class="product-card__image-wrapper">
+            <img
+              src="../../public/images/product-floral-wrist-cuffs.jpg"
+              alt="Crochet Hats Set"
+              class="product-card__image"
+              loading="lazy"
+            >
+            <div class="product-card__overlay">
+              <a href="shop.html" class="btn btn--primary btn--sm">View Details</a>
+            </div>
+            <button class="product-card__wishlist" aria-label="Add to wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card__content">
+            <span class="product-card__category">Hats</span>
+            <h3 class="product-card__title">Sunset Headband Set</h3>
+            <p class="product-card__price">₦8,500</p>
+          </div>
+        </article>
+      </div>
+      <div class="text-center mt-16 fade-in">
+        <a href="shop.html" class="btn btn--secondary btn--lg">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="section about-preview" id="about-preview">
+    <div class="about-preview__container">
+      <div class="fade-in">
+        <img
+          src="../../public/images/about-artisan-work.jpg"
+          alt="Artisan crocheting by hand"
+          class="about-preview__image"
+          loading="lazy"
+        >
+      </div>
+      <div class="about-preview__content fade-in fade-in--delay-2">
+        <span class="about-preview__label">Our Story</span>
+        <h2 class="about-preview__title">Where Tradition Meets Modern Elegance</h2>
+        <p class="about-preview__text">
+          At Legide Stitches, every piece tells a story of patience, passion, and artistry. Our handcrafted crochet creations blend time-honored techniques with contemporary designs, resulting in fashion that's as unique as the women who wear them.
+        </p>
+        <p class="about-preview__text">
+          Founded on the belief that handmade luxury deserves a place in modern wardrobes, we pour love into every stitch, every pattern, and every finished piece.
+        </p>
+        <a href="about.html" class="btn btn--primary">Discover More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" id="categories">
+    <div class="container">
+      <h2 class="section-title fade-in">Shop by Category</h2>
+      <p class="section-subtitle fade-in">Find your perfect crochet piece</p>
+      <div class="categories__grid">
+        <a href="shop.html?category=tops" class="category-card fade-in fade-in--delay-1" data-category="tops">
+          <img
+            src="../../public/images/category-tops.jpg"
+            alt="Crochet Tops Collection"
+            class="category-card__image"
+            loading="lazy"
+          >
+          <div class="category-card__overlay">
+            <h3 class="category-card__title">Tops</h3>
+            <span class="category-card__count">24 pieces</span>
+          </div>
+        </a>
+        <a href="shop.html?category=bags" class="category-card fade-in fade-in--delay-2" data-category="bags">
+          <img
+            src="../../public/images/category-bags.jpg"
+            alt="Crochet Bags Collection"
+            class="category-card__image"
+            loading="lazy"
+          >
+          <div class="category-card__overlay">
+            <h3 class="category-card__title">Bags</h3>
+            <span class="category-card__count">18 pieces</span>
+          </div>
+        </a>
+        <a href="shop.html?category=dresses" class="category-card fade-in fade-in--delay-3" data-category="dresses">
+          <img
+            src="../../public/images/category-dresses.jpg"
+            alt="Crochet Dresses Collection"
+            class="category-card__image"
+            loading="lazy"
+          >
+          <div class="category-card__overlay">
+            <h3 class="category-card__title">Dresses</h3>
+            <span class="category-card__count">15 pieces</span>
+          </div>
+        </a>
+        <a href="shop.html?category=hats" class="category-card fade-in fade-in--delay-4" data-category="hats">
+          <img
+            src="../../public/images/category-hats.jpg"
+            alt="Crochet Hats Collection"
+            class="category-card__image"
+            loading="lazy"
+          >
+          <div class="category-card__overlay">
+            <h3 class="category-card__title">Hats</h3>
+            <span class="category-card__count">32 pieces</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="section-title fade-in">What Our Customers Say</h2>
+      <p class="section-subtitle fade-in">Real stories from people who love our craft</p>
+      <div class="testimonials__slider fade-in" aria-label="Customer testimonials">
+        <div class="testimonials__track" id="testimonialTrack">
+          <!-- Testimonial 1 -->
+          <div class="testimonials__slide">
+            <div class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+              </div>
+              <blockquote class="testimonial-card__quote">
+                The quality is absolutely stunning. You can feel the love and care in every stitch. My crochet top from Legide Stitches is my most complimented piece!
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img
+                  src="../../public/images/testimonial-amara.jpg"
+                  alt="Amara Okafor"
+                  class="testimonial-card__avatar"
+                  loading="lazy"
+                >
+                <span class="testimonial-card__name">Amara Okafor</span>
+                <span class="testimonial-card__role">Fashion Enthusiast</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonials__slide">
+            <div class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+              </div>
+              <blockquote class="testimonial-card__quote">
+                I ordered a custom dress for a special occasion and it exceeded all my expectations. The attention to detail is remarkable. Legide Stitches truly creates wearable art.
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img
+                  src="../../public/images/testimonial-chioma.jpg"
+                  alt="Chioma Eze"
+                  class="testimonial-card__avatar"
+                  loading="lazy"
+                >
+                <span class="testimonial-card__name">Chioma Eze</span>
+                <span class="testimonial-card__role">Loyal Customer</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonials__slide">
+            <div class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+                <span class="testimonial-card__star">&#9733;</span>
+              </div>
+              <blockquote class="testimonial-card__quote">
+                From the beautiful packaging to the exquisite craftsmanship, everything about Legide Stitches screams premium. I've already ordered three more pieces!
+              </blockquote>
+              <div class="testimonial-card__author">
+                <img
+                  src="../../public/images/testimonial-nneka.jpg"
+                  alt="Nneka Adeyemi"
+                  class="testimonial-card__avatar"
+                  loading="lazy"
+                >
+                <span class="testimonial-card__name">Nneka Adeyemi</span>
+                <span class="testimonial-card__role">Style Blogger</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__controls">
+          <button class="testimonials__btn" id="prevTestimonial" aria-label="Previous testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <button class="testimonials__btn" id="nextTestimonial" aria-label="Next testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+        <div class="testimonials__dots" id="testimonialDots" role="tablist">
+          <button class="testimonials__dot testimonials__dot--active" data-slide="0" role="tab" aria-label="Testimonial 1" aria-selected="true"></button>
+          <button class="testimonials__dot" data-slide="1" role="tab" aria-label="Testimonial 2" aria-selected="false"></button>
+          <button class="testimonials__dot" data-slide="2" role="tab" aria-label="Testimonial 3" aria-selected="false"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section" id="newsletter">
+    <div class="container">
+      <div class="newsletter fade-in">
+        <div class="newsletter__content">
+          <h2 class="newsletter__title">Join the Legide Family</h2>
+          <p class="newsletter__text">
+            Be the first to know about new collections, exclusive offers, and behind-the-scenes stories from our atelier.
+          </p>
+          <form class="newsletter__form" id="newsletterForm" data-form="newsletter" novalidate>
+            <input
+              type="email"
+              class="newsletter__input"
+              placeholder="Enter your email address"
+              aria-label="Email address"
+              required
+              data-field="email"
+            >
+            <button type="submit" class="newsletter__btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">Legide Stitches</h3>
+          <p class="footer__description">
+            Handcrafted crochet fashion that celebrates artistry, individuality, and the beauty of slow fashion. Every stitch tells a story.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__column-title">Quick Links</h4>
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="shop.html" class="footer__link">Shop</a>
+          <a href="about.html" class="footer__link">About Us</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__column-title">Categories</h4>
+          <a href="shop.html?category=tops" class="footer__link">Tops</a>
+          <a href="shop.html?category=bags" class="footer__link">Bags</a>
+          <a href="shop.html?category=dresses" class="footer__link">Dresses</a>
+          <a href="shop.html?category=hats" class="footer__link">Hats</a>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__column-title">Get in Touch</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>hello@legidestitches.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>+234 800 123 4567</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Lagos, Nigeria</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Legide Stitches. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy Policy</a>
+          <a href="#" class="footer__bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/main.js" defer></script>
+  <script src="../js/navbar.js" defer></script>
+  <script src="../js/slider.js" defer></script>
+  <script src="../js/animations.js" defer></script>
+</body>
+</html>
