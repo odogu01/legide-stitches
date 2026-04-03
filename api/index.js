@@ -25,7 +25,7 @@ const MIME_TYPES = {
 };
 
 module.exports = function handler(req, res) {
-  let url = req.url.split('?')[0]; // Strip query params
+  let url = req.url.split('?')[0];
 
   // Route clean URLs to HTML files
   if (url === '/' || url === '') {
@@ -38,27 +38,23 @@ module.exports = function handler(req, res) {
     url = '/src/pages/contact.html';
   }
 
-  // Build absolute file path
-  const filePath = join(__dirname, '..', url);
+  const filePath = join(__dirname, url);
+  const rootPath = join(__dirname, '..');
 
   // Security: prevent directory traversal
-  const rootPath = join(__dirname, '..');
   if (!filePath.startsWith(rootPath)) {
     res.status(403).send('Forbidden');
     return;
   }
 
-  // Check if file exists
   if (!existsSync(filePath)) {
     res.status(404).send(`Not Found: ${url}`);
     return;
   }
 
-  // Read and serve the file
   try {
     const ext = extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
-
     const file = readFileSync(filePath);
     res.setHeader('Content-Type', contentType);
     res.status(200).send(file);
