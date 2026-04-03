@@ -11,7 +11,7 @@
   "keywords": ["crochet", "fashion", "handmade", "ecommerce"],
   "author": "Legide Stitches",
   "license": "UNLICENSED",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.21.0"
   }
 }
