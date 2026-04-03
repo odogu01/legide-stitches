@@ -1,25 +1,68 @@
 /**
  * Legide Stitches — Vercel Serverless Function
- * Serves the static frontend on Vercel's Node.js runtime.
+ * Handles routing for the static frontend.
  */
 
-import express from 'express';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-import { readFileSync } from 'fs';
+const { readFileSync, existsSync } = require('fs');
+const { join, extname } = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(dirname(__filename)); // Go up from api/ to project root
+const MIME_TYPES = {
+  '.html': 'text/html; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.js': 'application/javascript; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.gif': 'image/gif',
+  '.svg': 'image/svg+xml',
+  '.ico': 'image/x-icon',
+  '.webp': 'image/webp',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
+  '.ttf': 'font/ttf',
+  '.eot': 'application/vnd.ms-fontobject',
+};
 
-const app = express();
+module.exports = function handler(req, res) {
+  let url = req.url.split('?')[0]; // Strip query params
 
-// Serve static files from the project root
-app.use(express.static(join(__dirname)));
+  // Route clean URLs to HTML files
+  if (url === '/' || url === '') {
+    url = '/src/pages/index.html';
+  } else if (url === '/shop') {
+    url = '/src/pages/shop.html';
+  } else if (url === '/about') {
+    url = '/src/pages/about.html';
+  } else if (url === '/contact') {
+    url = '/src/pages/contact.html';
+  }
 
-// Redirect root to homepage
-app.get('/', (_req, res) => {
-  res.redirect('/src/pages/index.html');
-});
+  // Build absolute file path
+  const filePath = join(__dirname, '..', url);
 
-// Export as Vercel serverless function
-export default app;
+  // Security: prevent directory traversal
+  const rootPath = join(__dirname, '..');
+  if (!filePath.startsWith(rootPath)) {
+    res.status(403).send('Forbidden');
+    return;
+  }
+
+  // Check if file exists
+  if (!existsSync(filePath)) {
+    res.status(404).send(`Not Found: ${url}`);
+    return;
+  }
+
+  // Read and serve the file
+  try {
+    const ext = extname(filePath).toLowerCase();
+    const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+
+    const file = readFileSync(filePath);
+    res.setHeader('Content-Type', contentType);
+    res.status(200).send(file);
+  } catch (err) {
+    res.status(500).send('Internal Server Error');
+  }
+};
