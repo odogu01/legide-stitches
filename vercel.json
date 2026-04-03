@@ -1,10 +1,5 @@
 {
-  "redirects": [
-    { "source": "/src/pages/index.html", "destination": "/", "permanent": true },
-    { "source": "/src/pages/shop.html", "destination": "/shop", "permanent": true },
-    { "source": "/src/pages/about.html", "destination": "/about", "permanent": true },
-    { "source": "/src/pages/contact.html", "destination": "/contact", "permanent": true }
-  ],
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/src/pages/index.html" },
     { "source": "/shop", "destination": "/src/pages/shop.html" },
