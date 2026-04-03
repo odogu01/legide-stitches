@@ -3,8 +3,13 @@
  * Handles routing for the static frontend.
  */
 
-const { readFileSync, existsSync } = require('fs');
-const { join, extname } = require('path');
+import { readFileSync, existsSync } from 'fs';
+import { join, extname } from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -24,7 +29,7 @@ const MIME_TYPES = {
   '.eot': 'application/vnd.ms-fontobject',
 };
 
-module.exports = function handler(req, res) {
+export default function handler(req, res) {
   let url = req.url.split('?')[0];
 
   // Route clean URLs to HTML files
@@ -61,4 +66,4 @@ module.exports = function handler(req, res) {
   } catch (err) {
     res.status(500).send('Internal Server Error');
   }
-};
+}

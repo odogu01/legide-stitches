@@ -1,10 +1,10 @@
 {
   "functions": {
-    "api/index.cjs": {
+    "api/index.js": {
       "includeFiles": "**/*"
     }
   },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index.cjs" }
+    { "source": "/(.*)", "destination": "/api/index.js" }
   ]
 }
