@@ -1,10 +1,8 @@
 {
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "**/*"
-    }
-  },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index.js" }
+    { "source": "/shop",    "destination": "/src/pages/shop.html"    },
+    { "source": "/about",   "destination": "/src/pages/about.html"   },
+    { "source": "/contact", "destination": "/src/pages/contact.html" },
+    { "source": "/",        "destination": "/src/pages/index.html"   }
   ]
 }
